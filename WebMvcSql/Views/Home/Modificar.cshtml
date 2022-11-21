@@ -1,0 +1,32 @@
+﻿@model WebMvcSql.Models.cArticulo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar</title>
+</head>
+<body>
+    <form method="post" action="/Home/Modificar">
+        Nombre
+        <input type="text" name="nombre" value="@Model.Nombre" />
+        <br />
+        Apellido
+        <input type="text" name="apellido" value="@Model.Apellido" />
+        <br />
+        Teléfono
+        <input type="text" name="telefono" value="@Model.Telefono" />
+        <br />
+        Cargo
+        <input type="text" name="cargo" value="@Model.Cargo" />
+        <br />
+        <input type="submit" value="Enviar" />
+        <br />
+    </form>
+    <a href="/Home/Index">Regresar</a>
+</body>
+</html>

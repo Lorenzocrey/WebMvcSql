@@ -1,0 +1,69 @@
+﻿@model IEnumerable <WebMvcSql.Models.cArticulo>
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Teléfono
+            </th>
+            <th>
+                Cargo
+            </th>
+            <th>
+                Editar
+            </th>
+            <th>
+                Eliminar
+            </th>
+        </tr>
+        @foreach (var reco in Model)
+        {
+            <tr>
+            <td>
+                @reco.Codigo
+            </td>
+            <td>
+                @reco.Nombre
+            </td>
+            <td> 
+                @reco.Apellido
+            </td>
+            <td>
+                @reco.Telefono
+            </td>
+            <td>
+                @reco.Cargo
+            </td>
+            <td>
+                <a href="/Home/Modificar?pCod=@reco.Codigo">Editar</a>
+            </td>
+            <td>
+                <a href="/Home/Eliminar?pCod=@reco.Codigo">Eliminar</a>
+            </td>
+        </tr>
+        }
+
+    </table>
+    <a href="/Home/Insertar">Agregar</a>
+</body>
+</html>
+
+
+

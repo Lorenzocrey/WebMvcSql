@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insertar</title>
+</head>
+<body>
+    <form method="post" action="/Home/Inserta">
+        Nombre:
+        <input type="text" name="nombre" />
+        <br />
+        Apellido:
+        <input type="text" name="apellido" />
+        <br />
+        Teléfono
+        <input type="text" name="telefono" />
+        <br />
+        Cargo
+        <input type="text" name="cargo" />
+        <br />
+        <input type="submit" value="Enviar" />
+    </form>
+    <a href="/Home/Index">Regresar</a>
+</body>
+</html>
